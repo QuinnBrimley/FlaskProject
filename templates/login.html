@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>FlaskTest</title>
+    <!--This is how we link to our CSS file in our static folder-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+</head>
+ 
+<body>
+    <h2 class="homeHeader">Guess a number!</h2>
+    <h4 class="homeDetails">Please type a number in!</h4>
+
+{% block content %}
+<img src="{{ url_for('static', filename='OIP (4).jpg') }}" />
+<form method="post">
+    <label for="username">User Name:</label>
+    <input type="text" name="userName" id="userName" required>
+    <label for="password">Password:</label>
+    <input type="text" name="password" id="password" required>
+    <button type="submit">Login</button>
+</form>
+{% endblock %}
+</body>
+</html>

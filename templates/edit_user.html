@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>FlaskTest</title>
+    <!--This is how we link to our CSS file in our static folder-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+</head>
+<body>
+{% block content %}
+<h2>Edit Users</h2>
+<form method="post">
+    <label for="title">User Name</label>
+    <input type="text" name="userName" id="userName" value="{{ users.username}}" required>
+    <label for="platform">password</label>
+    <input type="text" name="password" id="password" value="{{ users.password }}" required>
+    <button type="submit">Update user</button>
+</form>
+{% endblock %}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>FlaskTest</title>
+    <!--This is how we link to our CSS file in our static folder-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+</head>
+ 
+<body>
+    <h2 class="homeHeader">Welcome To My Homepage</h2>
+    <h4 class="homeDetails">Flask: Rendering Templates</h4>
+ <!-- What appears before block body can be used as a basic template again -->  
+{% block body %}
+
+<p>This is a Flask application.</p>
+<p>{{num}}</p>
+ 
+{% endblock %}
+ 
+ 
+</body>
+ 
+</html>
